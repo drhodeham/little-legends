@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import ActionCreators from '../../_redux/actions';
 import Header from '../../organisms/Header';
 import './App.css';
 
 class App extends Component {
   render() {
+    const { text, setText } = this.props;
     return (
       <div className="App">
-        <Header text="Text"/>
+        <Header text={text} onClick={() => setText('OOF')}/>
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    text: state.text,
+  }
+}
+
+export default connect(mapStateToProps, ActionCreators)(App);
