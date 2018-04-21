@@ -1,10 +1,28 @@
 version: "3"
 
 services:
-  web:
-    build:
-      context: .
-      dockerfile: dockerfiles/web
+  db:
+    image: postgres
     ports:
-     - "3000"
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgres/data
+  flask:
+    build: flask
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask/:/app/
+    depends_on:
+      - db
+    command: python3 app.py
+  react:
+    build: react
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./react/:/app/
     command: npm start
+
+volumes:
+  db-data:
