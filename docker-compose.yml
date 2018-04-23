@@ -15,6 +15,7 @@ services:
       - ./flask/:/app/
     depends_on:
       - db
+    env_file: docker-compose.env
     command: python3 app.py
   react:
     build: react
@@ -22,6 +23,7 @@ services:
       - "3000:3000"
     volumes:
       - ./react/:/app/
+    env_file: docker-compose.env
     command: npm start
 
 volumes:
