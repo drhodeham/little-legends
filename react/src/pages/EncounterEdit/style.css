@@ -1,0 +1,13 @@
+body {
+    background-color: #222;
+    margin: 0;
+}
+
+.page-header {
+    width: 100%;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 0.5em;
+}

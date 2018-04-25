@@ -22,7 +22,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./react/:/app/
+      - ./react/src/:/app/src/
     env_file: docker-compose.env
     command: npm start
 

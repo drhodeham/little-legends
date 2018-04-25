@@ -1,7 +1,7 @@
 # base image
 FROM node:9.6
 
-COPY react/ /app
+COPY . /app
 WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
