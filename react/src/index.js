@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import store, { history } from './store';
 import App from './pages/App';
 import EncounterEdit from './pages/EncounterEdit';
@@ -15,6 +15,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/edit/encounter" component={EncounterEdit} />
+        <Redirect from='/edit/' to='/edit/encounter' />
       </Switch>
     </ConnectedRouter>
   </Provider>,

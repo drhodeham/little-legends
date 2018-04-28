@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Header.css';
 
 const props = {
   text: PropTypes.string,
@@ -10,7 +9,7 @@ const props = {
 const Header = ({ text, onClick }) => {
   return (
     <div 
-      className="Header"
+      className="header"
       onClick={onClick}
     >
       { text }

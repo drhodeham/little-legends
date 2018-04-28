@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.encounter {
+.encounter-list__encounter {
     background-color: #444;
     font-size: 1.5em;
     padding: 0.25em;
@@ -15,20 +15,20 @@
     flex-direction: row;
     align-items: center;
     width: 80%;
-}
 
-.bit {
-    background-color: #666;
-    padding: 0.25em;
-    margin-right: 0.5em;
-    border-radius: 0.3em;
-}
+    .bit {
+        background-color: #666;
+        padding: 0.25em;
+        margin-right: 0.5em;
+        border-radius: 0.3em;
 
-.bit.id {
-    min-width: 1em;
-    text-align: center;
-}
+        &.id {
+            min-width: 1em;
+            text-align: center;
+        }
 
-.bit.name {
-    margin-right: auto;
+        &.name {
+            margin-right: auto;
+        }
+    }
 }

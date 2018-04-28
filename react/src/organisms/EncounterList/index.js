@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import Encounter from './Encounter';
 
-import './style.css';
-
 class EncounterList extends Component {
 
     render() {
@@ -15,7 +13,6 @@ class EncounterList extends Component {
 
         let renderContent = []
         for (let i = 0; i < encounters.length; i++) {
-            console.log(encounters[i])
             renderContent.push(
                 <Encounter 
                     key={i} 

@@ -1,0 +1,48 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+body {
+    background-color: #222;
+    margin: 0;
+}
+
+.encounter-edit__header {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 0.5em;
+
+    .page-button {
+        padding: 0.5em;
+        border-radius: 0.5em;
+        background-color: #222;
+        margin: 0 0.5em;
+        color: #DDD;
+
+        &:hover {
+            background-color: #111;
+            color: #CCC;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &.create-new {
+            margin-left: auto;
+            margin-right: 0.5em;
+            background-color: #262;
+
+            &:hover {
+                background-color: #151;
+            }
+        }
+    }
+}

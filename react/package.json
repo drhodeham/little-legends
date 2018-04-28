@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@webscopeio/react-textarea-autocomplete": "2.1.1",
+    "chokidar-cli": "1.2.0",
     "history": "^4.7.2",
     "keymirror": "^0.1.1",
+    "less": "^3.0.2",
+    "less-plugin-glob": "^2.0.2",
+    "npm-run-all": "^4.1.2",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -16,8 +21,12 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm-run-all -p start-js build-css watch-css",
+    "start-js": "react-scripts start",
+    "build": "npm-run-all -p build-js build-css",
+    "build-js": "react-scripts build",
+    "build-css": "lessc --glob -s src/style.less src/style.css",
+    "watch-css": "chokidar 'src/**/*.less' -c 'npm run build-css'",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

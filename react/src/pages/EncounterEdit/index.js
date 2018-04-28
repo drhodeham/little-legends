@@ -5,7 +5,7 @@ import EditableEncounter from '../../organisms/EditableEncounter';
 
 import Header from './Header';
 
-import './style.css';
+import '../../style.css';
 
 class EncounterEdit extends Component {
 

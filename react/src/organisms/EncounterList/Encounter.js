@@ -16,7 +16,7 @@ const Encounter = ({ key, encounter, history }) => {
     return (
         <div 
             key={key} 
-            className='encounter' 
+            className='encounter-list__encounter' 
             onClick={() => history.push('/edit/encounter/' + encounter.id)}
         >
             <div className='bit id'>

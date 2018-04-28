@@ -24,7 +24,7 @@ services:
     volumes:
       - ./react/src/:/app/src/
     env_file: docker-compose.env
-    command: npm start
+    command: yarn start
 
 volumes:
   db-data:
